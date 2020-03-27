@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [STANISLAV ZHIRKOV](https://up.htmlacademy.ru/adaptive/19/user/1315435).
-* Наставник: `Неизвестно`.
+* Наставник: [Максиим Иванов](https://htmlacademy.ru/profile/id342945).
 
 ---
 
