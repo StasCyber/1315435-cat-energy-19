@@ -30,6 +30,100 @@
     </header>
 
     <main>
+      <section class="page-form">
+        <h2 class="page-form__header">Подбор программы</h2>
+        <form class="page-form__form form" action="#" method="GET">
+
+          <div class="form__cat-data"><!--Данные кота-->
+            <div class="cat-data__row">
+              <label class="cat-data__label" for="cat-name">Имя:*</label>
+              <input class="cat-data__input" id="cat-name" type="text" placeholder="Барсик" name="Имя кота/кошки" required>
+            </div>
+            <div class="cat-data__row">
+              <label class="cat-data__label" for="cat-weight">Вес (кг):*</label>
+              <input class="cat-data__input" id="cat-weight" type="text" placeholder="7" name="Вес кота/кошки" required>
+            </div>
+            <div class="cat-data__row">
+              <label class="cat-data__label" for="cat-age">Возраст (лет):</label>
+              <input class="cat-data__input" id="cat-age" type="text" placeholder="7" name="Возраст кота/кошки">
+            </div>
+          </div>
+
+          <div class="form__cat-info"><!--Радиобаттоны-->
+            <div class="cat-info__row">
+              <input class="cat-info__radio" id="losing-weight" type="radio" name="Похудение">
+              <label class="cat-info__label" for="lossing-weight">Похудение</label>
+            </div>
+            <div class="cat-info__row">
+              <input class="cat-info__radio" id="gain" type="radio" name="Набор массы">
+              <label class="cat-info__label" for="gain">Набор массы</label>
+            </div>
+            <div class="cat-info__row">
+              <input class="cat-info__radio" id="advise" type="radio" name="Нужен совет">
+              <label class="cat-info__label" for="advise">Не знаю (нужен ваш совет)</label>
+            </div>
+          </div>
+
+          <div class="form__owner-contacts"><!--Е-мэил и телефон-->
+            <h2 class="owner-contacts__header">Контактные данные (владельца кота)</h2>
+            <div class="owner-contacts__row">
+              <label class="owner-contacts__label" for="e-mail">E-mail:*</label>
+              <input class="owner-contacts__input" id="e-mail" type="email" placeholder="Kuklachev@gmail.com" name="Имя кота/кошки" required>
+              <a href="#">
+                <!-- Здесь будет вставка иконки письма -->
+              </a>
+            </div>
+            <div class="owner-contacts__row">
+              <label class="owner-contacts__label" for="phone">Телефон:*</label>
+              <input class="owner-contacts__input" id="phone" type="tel" pattern="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" name="Телефон:" required>
+              <a href="#">
+                <!-- Здесь будет вставка иконки трубки -->
+              </a>
+            </div>
+          </div>
+
+          <div class="form__comment"><!--комментарий-->
+            <h2 class="comment__header">Комментарий</h2>
+            <textarea class="comment__text" name="Комментарий" rows="5" cols="33">Расскажите обо всех повадках кота</textarea>
+          </div>
+
+          <div class="form__additional-section"><!--дополнительно-->
+            <h2 class="additional-section__header">Дополнительно</h2>
+
+            <div class="additional-section__row">
+              <input class="additional-section__input" id="shugar" type="checkbox" name="Сахарозаменитель">
+              <label class="additional-section__label" for="shugar">Сахарозаменитель</label>
+            </div>
+
+            <div class="additional-section__row">
+              <input class="additional-section__input" id="water" type="checkbox" name="Питьевая вода">
+              <label class="additional-section__label" for="water">Питьевая вода</label>
+            </div>
+
+            <div class="additional-section__row">
+              <input class="additional-section__input" id="milk" type="checkbox" name="Молоко">
+              <label class="additional-section__label" for="milk">Молоко</label>
+            </div>
+
+            <div class="additional-section__row">
+              <input class="additional-section__input" id="vitamins" type="checkbox" name="Витамины">
+              <label class="additional-section__label" for="vitamins">Витамины</label>
+            </div>
+
+          </div>
+
+        </form>
+        <p class="form__footnote">* — Обязательные поля</p>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__header">Приглашаем к сотрудничеству диллеров!</h2>
+        <p class="contacts__adress">ул. Большая Конюшенная д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__map">
+          <!-- Здесь будет фрэйм карты -->
+          <!-- Здесь будет изображение карты-подложка фрейма карты -->
+        </div>
+      </section>
 
     </main>
 
