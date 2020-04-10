@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  src: url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 13px 40px;
+  background-color: @green;
+  color: @white;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  background-color: @grey;
+}
+
+// @import "normalise.less";
+@import "variables.less";
+@import "mixins.less";
+@import "global.less";
+
+// Блоки находящиеся на всех страницах
+
+@import "blocks/main-nav.less";
+@import "blocks/contacts.less";
+@import "blocks/social.less";
+@import "blocks/button.less";
+
+// Блоки находящиеся в index.html
+
+@import "blocks/page-main.less";
+@import "blocks/intro.less";
+@import "blocks/advantages.less";
+@import "blocks/description.less";
+@import "blocks/instance.less";
+@import "blocks/facts.less";
+@import "blocks/compare.less";
+
+// Блоки находящиеся в catalog.html
+
+@import "blocks/catalog.less";
+@import "blocks/list-products__item.less";
+@import "blocks/show-more.less";
+@import "blocks/additional.less";
+@import "blocks/bonus.less";
+
+// Блоки находящиеся в form.html
+
+@import "blocks/page-form.less";
+@import "blocks/form.less";
+@import "blocks/cat-data.less";
+@import "blocks/cat-info.less";
+@import "blocks/owner-contacts.less";
+@import "blocks/comment.less";
+@import "blocks/additional-section.less";

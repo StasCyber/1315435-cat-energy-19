@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: @white;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  color: @black;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 320px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-weight: normal;
+}
