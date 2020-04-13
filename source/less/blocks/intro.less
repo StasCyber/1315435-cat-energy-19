@@ -1,5 +1,34 @@
+// В данном блоке min-height задан для удобства восприятия, в будущем удалю
 .intro {
+  min-height: 480px;
+  margin-bottom: 23px;
   background-color: @white;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
+
+.intro__button {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (min-width: @tablet) {
+  .intro {
+    min-height: 840px; //блок intro вместе с header 950px
+    margin-bottom: 0;
+  }
+
+  .intro__button {
+    width: 246px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .intro {
+    min-height: 586px; //блок intro вместе с header 696px
+    margin-bottom: 80px;
+    padding-left: 80px;
+  }
 }

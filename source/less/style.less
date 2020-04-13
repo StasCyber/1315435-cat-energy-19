@@ -1,3 +1,9 @@
+//Медиазапрос имеющий тот же смысл что и meta name="viewport" в html разметке
+// @viewport {
+//   width: device-width;
+//   zoom: 1.0;
+// }
+
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswaldregular.woff2") format("woff2");
@@ -19,30 +25,31 @@
 .button {
   display: block;
   width: 100%;
-  padding: 13px 40px;
+  padding: 13px 20px;
   background-color: @green;
   color: @white;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
 }
 
 .page-footer {
   background-color: @grey;
 }
 
-// @import "normalise.less";
 @import "variables.less";
 @import "mixins.less";
 @import "global.less";
 
 // Блоки находящиеся на всех страницах
 
+@import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/contacts.less";
+@import "blocks/page-footer.less";
 @import "blocks/social.less";
-@import "blocks/button.less";
 
 // Блоки находящиеся в index.html
 
@@ -60,7 +67,6 @@
 @import "blocks/list-products__item.less";
 @import "blocks/show-more.less";
 @import "blocks/additional.less";
-@import "blocks/bonus.less";
 
 // Блоки находящиеся в form.html
 

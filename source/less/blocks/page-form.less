@@ -9,6 +9,7 @@
 }
 
 .page-form__paragraph {
+  padding-left: 40px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -31,4 +32,90 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.form__footnote {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: @tablet) {
+  .form {
+    padding: 0px 40px;
+  }
+
+  .page-form__header {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .page-form__paragraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .page-form h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .page-form input,
+  .page-form label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .comment__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .additional-section__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .additional-section__row {
+    width: 283px;
+    // margin-right: 60px;
+  }
+
+  .form__button-submit {
+    display: inline-block;
+    width: 283px;
+    border: none;
+  }
+
+  .form__footnote {
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-form__header {
+    padding-left: 40px;
+  }
+
+  .primary-data {
+    display: flex;
+  }
+
+  .owner-contacts__row {
+    width: 570px;
+  }
+
+  .owner-contacts__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__button-submit {
+    width: 570px;
+  }
+
+  // .form__footnote { не пойму почему при добавлении размера по макету переносится на новую строку
+  //   width: 570px;
+  // }
 }
