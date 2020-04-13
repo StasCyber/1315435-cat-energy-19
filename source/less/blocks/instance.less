@@ -5,6 +5,7 @@
 }
 
 .instance__header {
+  margin-top: 0;
   font-size: 36px;
   line-height: 60px;
   padding-bottom: 40px;
@@ -16,6 +17,10 @@
   margin-bottom: 30px;
   color: @light-black;
   font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.facts {
+  display: inline-block;
 }
 
 .facts__header {
@@ -38,7 +43,7 @@
   text-transform: uppercase;
 }
 
-.compare {
+.instance__compare {
   text-align: center;
 }
 
@@ -46,4 +51,55 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet) {
+  .instance {
+    padding-top: 52px;
+    padding-bottom: 68px;
+  }
+
+  .instance__header {
+    font-size: 60px;
+    margin-bottom: 72px;
+  }
+
+  .instance__text {
+    margin-bottom:60px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .facts__header {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .facts__text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .instance__expenses-wrap {
+    display: inline-block;
+  }
+
+  .instance__expenses {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .compare__label {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .instance__wrap {
+    display: flex;
+  }
+
+  .instance__text {
+    width: 50%;
+  }
 }

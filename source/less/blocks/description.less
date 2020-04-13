@@ -13,7 +13,7 @@
 .description__item {
   font-size: 14px;
   line-height: 18px;
-  margin-left: 81px;
+  // margin-left: 81px;
   margin-bottom: 34px;
   color: @light-black;
   font-family: "Arial", "Helvetica", sans-serif;
@@ -21,4 +21,50 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+@media (min-width: @tablet) {
+  .description { //не пойму, как у этого блока item'ов ширину рассчитывать
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+
+  .description__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .description__header {
+    margin-bottom: 77px;
+    font-size: 60px;
+  }
+
+  .description__item {
+    width: 324px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .description { //не пойму, как у этого блока item'ов ширину рассчитывать
+    padding-top: 84px;
+    padding-bottom: 54px; //у следующего блока padding top будет 36px
+  }
+
+  .description__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .description__header {
+    margin-bottom: 77px;
+  }
+
+  .description__item {
+    width: 245px;
+  }
+
 }
