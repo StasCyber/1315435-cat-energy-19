@@ -9,10 +9,9 @@ html {
 }
 
 body {
-  min-width: @mobile;
   // Две строки ниже используются для нормализации стилей
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
 
   background-color: @white;
   font-family: "Oswald", "Arial", "Helvetica", sans-serif;
@@ -21,38 +20,46 @@ body {
 }
 
 .container {
-  width: 280px;
+  // min-width: 280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 // Планшетная версия (от 768px)
 @media (min-width: @tablet) {
   .container {
-    width: 708px;
+    // max-width: 768px;
+    padding: 0 30px;
   }
 }
 
 // Десктопная версия (от 1440px)
 @media (min-width: @desktop) {
   .container {
-    width: 1300px;
+    max-width: 1300px;
     padding: 0 40px;
   }
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
+
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 img {
   max-width: 100%;
-  height: auto
+  height: auto;
 }
 
 a {

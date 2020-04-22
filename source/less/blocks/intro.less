@@ -1,25 +1,104 @@
 // В данном блоке min-height задан для удобства восприятия, в будущем удалю
 .intro {
+  position: relative;
   min-height: 480px;
-  margin-bottom: 23px;
-  background-color: @white;
+  // margin-bottom: 23px;
+  padding-top: 26px;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 63.5%;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: @green;
+  z-index: -1;
+}
+
+.intro__header {
+  width: 260px;
+  // margin-top: 0;
+  margin: 0 auto;
+  margin-bottom: 26px;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: @text-white;
+}
+
+.intro__call {
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 14px;
+  color: @text-white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro__image {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .intro__button {
+  margin-top: 2px; //не пойму почему между кнопкой и основным блоком intro небольшой разрыв в 3 пикселя
   font-size: 14px;
   line-height: 18px;
 }
 
 @media (min-width: @tablet) {
   .intro {
-    min-height: 840px; //блок intro вместе с header 950px
+    min-height: 843px;
     margin-bottom: 0;
+    padding-top: 33px;
+    padding-left: 118px;
+  }
+
+  .intro__image {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    top: 234px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .intro::before {
+    display: none;
+  }
+
+  .intro__header {
+    width: 487px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: #111111;
+  }
+
+  .intro__call {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+    color: #111111;
+    text-align: left;
   }
 
   .intro__button {
     width: 246px;
+    padding: 15px 20px;
+    top: 262px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -28,7 +107,19 @@
 @media (min-width: @desktop) {
   .intro {
     min-height: 586px; //блок intro вместе с header 696px
-    margin-bottom: 80px;
-    padding-left: 80px;
+    margin-bottom: 24px;
+    padding-top: 56px;
+    padding-left: 120px;
+  }
+
+  .intro__call {
+    margin-bottom: 55px;
+  }
+
+  .intro__image {
+    width: 552px;
+    height: 499px;
+    top: -25px;
+    left: 18%;
   }
 }

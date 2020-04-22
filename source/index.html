@@ -7,70 +7,87 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <div class="container">
 
-      <header class="page-header">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Питание для котов - Кэт-Энерджи">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list nav-list">
-              <li class="nav-list__item nav-list__item--active">
-                <a href="#">Главная</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
+      <header class="page-header page-header--main">
+        <div class="page-header__wrap">
+          <a class="page-header__logo">
+            <picture>
+              <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Питание для котов - Кэт-Энерджи">
+            </picture>
+          </a>
+          <button class="main-nav__toggle main-nav__toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <nav class="main-nav main-nav--opened">
+          <ul class="main-nav__list nav-list nav-list--white">
+            <li class="nav-list__item nav-list__item--active nav-list__item--white">
+              <a href="#">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+
+          </ul>
         </nav>
       </header>
 
       <main class="page-main">
-        <div class="page-main__wrap">
-          <section class="intro">
+        <!-- <div class="page-main__wrap"> -->
+          <section class="intro container">
             <h1 class="intro__header">Функциональное питание для котов</h1>
             <p class="intro__call">Занялся собой? Займись котом!</p>
-            <img class="intro__image" src="https://via.placeholder.com/150x150" alt="Энергетический корм для кота, с курицей">
-            <div class="intro__button">
-              <a class="intro__button button" href="form.html">Подобрать программу</a>
-            </div>
+            <picture class="intro__picture">
+              <!-- <source type="image/webp" media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp, img/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x"> -->
+              <source media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+              <img class="intro__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280px" height="271px" alt="Энергетический корм для кота, с курицей">
+            </picture>
+            <a class="intro__button button" href="form.html">Подобрать программу</a>
           </section>
 
-          <section class="advantages">
-            <div class="advantages__item">
+          <section class="advantages container">
+            <div class="advantages__item advantages__item--slim">
               <h2 class="advantages__item-header">Похудение</h2>
               <p class="advantages__item-text">Ваш кот весит больше собаки и
                 почти утратил способность лазить по деревьям? Пора на диету! Cat
                 Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="advantages__item-link">Каталог Slim</a>
             </div>
-            <div class="advantages__item">
+            <div class="advantages__item advantages__item--gain">
               <h2 class="advantages__item-header">Набор массы</h2>
               <p class="advantages__item-text">Заработать авторитет среди
-                дворовых котов и даже собак? Серия Cat Energy Pro поможет
-                вашему коту нарастить необходимые мышцы!</p>
+                дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет
+                вашему&nbsp;коту нарастить необходимые мышцы!</p>
               <a class="advantages__item-link">Каталог Pro</a>
             </div>
           </section>
 
-          <section class="description">
+          <section class="description container">
             <h2 class="description__header">Как это работает</h2>
-            <div class="description__wrap">
-              <p class="description__item">Функциональное питание
-                содержит только полезные питательные вещества.</p>
-              <p class="description__item">Выпускается в виде порошка,
-                который нужно лишь залить кипятком и готово.</p>
-              <p class="description__item">Замените один-два приема
-                обычной еды на наше функциональное питание.</p>
-              <p class="description__item">Уже через месяц
-                наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </div>
+            <ul class="description__list">
+              <li class="description__item description__item--leaf">
+                <p class="description__text">Функциональное питание
+                  содержит только полезные питательные вещества.</p>
+              </li>
+              <li class="description__item description__item--powder">
+                <p class="description__text">Выпускается в виде порошка,
+                  который нужно лишь залить кипятком и готово.</p>
+              </li>
+              <li class="description__item description__item--dining">
+                <p class="description__text">Замените один-два приема
+                  обычной еды на наше функциональное питание.</p>
+              </li>
+              <li class="description__item description__item--clock">
+                <p class="description__text">Уже через месяц
+                  наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
+              </li>
+            </ul>
           </section>
 
           <section class="instance">
@@ -103,8 +120,8 @@
                 <label class="compare__label compare__label--slim" for="compare-slim">Стало</label>
               </div>
             </div>
-           </section>
-        </div>
+          </section>
+        <!-- </div> -->
 
         <section class="contacts">
           <h2 class="contacts__header">Приглашаем к сотрудничеству диллеров!</h2>
@@ -139,7 +156,6 @@
           </a>
         </div>
       </footer>
-    </div>
 
   </body>
 </html>
