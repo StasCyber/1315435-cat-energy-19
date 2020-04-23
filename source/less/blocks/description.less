@@ -1,70 +1,147 @@
 .description {
   width: 100%;
-  padding-top: 34px;
-  padding-bottom: 50px;
+  padding-top: 17px;
+  padding-bottom: 30px;
+}
+
+.description__list {
+  .list-reset;
 }
 
 .description__header {
   font-size: 36px;
   line-height: 60px;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
 }
 
 .description__item {
+  display: block;
+  position: relative;
+  min-height: 60px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 3px;
+  padding-left: 82px;
+
   font-size: 14px;
   line-height: 18px;
-  // margin-left: 81px;
-  margin-bottom: 34px;
   color: @light-black;
   font-family: "Arial", "Helvetica", sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: @green;
+  }
+
+  &--leaf::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--powder::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--dining::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--clock::before {
+    background-image: url("../../img/advantage-clock@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+.description__text {
+  margin: 0;
+}
+
 @media (min-width: @tablet) {
-  .description { //не пойму, как у этого блока item'ов ширину рассчитывать
-    padding-top: 54px;
+  .description {
+    padding-top: 46px;
+    padding-right: 109px;
     padding-bottom: 52px;
   }
 
-  .description__wrap {
+  .description__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    counter-reset: list;
   }
 
   .description__header {
-    margin-bottom: 77px;
+    margin-bottom: 72px;
     font-size: 60px;
   }
 
+  .description__item::before {
+    position: static;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
+
   .description__item {
-    width: 324px;
+    position: relative;
+    width: 245px;
+    margin-bottom: 133px;
+    padding: 0;
     font-size: 16px;
     line-height: 24px;
+    counter-increment: list;
+  }
+
+  .description__item::after {
+    content: counter(list);
+    position: absolute;
+    display: block;
+    width: 114px;
+    top: 0;
+    right: 14px;
+    font-size: 17.56em;
+    line-height: 0.71em;
+    color: @grey;
+    z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
   }
 }
 
 @media (min-width: @desktop) {
   .description { //не пойму, как у этого блока item'ов ширину рассчитывать
-    padding-top: 84px;
+    padding-top: 31px;
+    padding-right: 40px;
     padding-bottom: 54px; //у следующего блока padding top будет 36px
   }
 
-  .description__wrap {
+  .description__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .description__header {
-    margin-bottom: 77px;
+    margin-bottom: 72px;
   }
 
   .description__item {
     width: 245px;
+    margin-bottom: 21px;
   }
-
 }
