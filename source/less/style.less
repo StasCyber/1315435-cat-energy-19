@@ -36,8 +36,37 @@
   cursor: pointer;
 }
 
-.page-footer {
-  background-color: @grey;
+.header-wrapper {
+  position: relative;
+  padding-left: 20px;
+}
+
+.header-wrapper::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 85%;
+  top: 53%;
+  right: 0;
+  height: 3px;
+  background-color: @green;
+  z-index: -1;
+}
+
+@media (min-width: @tablet) {
+  .header-wrapper {
+    padding: 0 30px;
+  }
+
+  .header-wrapper::after {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop) {
+  .header-wrapper {
+    padding: 0 70px;
+  }
 }
 
 @import "variables.less";
@@ -68,6 +97,7 @@
 @import "blocks/list-products__item.less";
 @import "blocks/show-more.less";
 @import "blocks/additional.less";
+@import "blocks/bonus.less";
 
 // Блоки находящиеся в form.html
 

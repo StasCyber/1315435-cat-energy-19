@@ -14,12 +14,16 @@
   left: 0;
   right: 0;
   height: 63.5%;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: @green;
   z-index: -1;
+
+  @media (min-resolution: retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__header {
