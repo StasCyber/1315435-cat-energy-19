@@ -1,25 +1,25 @@
 .instance {
-  padding-top: 29px;
-  padding-bottom: 40px;
+  padding-top: 16px;
+  padding-bottom: 35px;
   background-color: @grey;
 }
 
 .instance__header {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding: 0 20px;
 
   font-size: 36px;
   line-height: 60px;
 }
 
-.instance__wrap {
+.instance__wrapper {
   padding: 0 20px;
 }
 
 .instance__text {
   margin-right: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 
   font-size: 14px;
   line-height: 18px;
@@ -27,27 +27,51 @@
   font-family: "Arial", "Helvetica", sans-serif;
 }
 
-.facts {
-  display: inline-block;
+.instance__facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -16px;
 }
 
-.facts__header {
+.instance__item {
+  width: 40%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.instance__item-wrapper {
+  padding: 13px 10px 0;
+  border-radius: 3px;
+  border: solid 1px #cdcdcd;
+}
+
+.instance__item-header {
+  text-align: center;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.facts__text {
+.instance__item-text {
+  margin-inline-start: 0;
+  position: relative;
+  top: 8px;
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  // width: 87px;
+  background-color: @grey;
   font-size: 12px;
   line-height: 12px;
   color: @light-black;
-  text-transform: uppercase;
   font-family: "Arial", "Helvetica", sans-serif;
 }
 
 .instance__expenses {
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -63,38 +87,77 @@
 
 @media (min-width: @tablet) {
   .instance {
-    padding-top: 52px;
-    padding-bottom: 68px;
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 29px;
+    background-color: transparent;
+  }
+
+  .instance::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 44%;
+    background-color: #ebebeb;
+    bottom: 0;
+    z-index: -1;
   }
 
   .instance__header {
+    margin-bottom: 49px;
+    padding: 0 30px;
     font-size: 60px;
-    margin-bottom: 72px;
+  }
+
+  .instance__wrapper {
+    padding: 0 30px;
+  }
+
+  .instance__wrapper-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 51px;
   }
 
   .instance__text {
-    margin-bottom: 60px;
+    margin-bottom: 38px;
     font-size: 16px;
     line-height: 24px;
   }
 
-  .facts__header {
+  .instance__facts {
+    width: 57%;
+    margin: 0 -20px;
+  }
+
+  .instance__item-header {
     font-size: 30px;
     line-height: 37px;
   }
 
-  .facts__text {
+  .instance__item-text {
+    max-width: 95%;
     font-size: 14px;
     line-height: 14px;
+    background-color: #ffffff;
   }
 
-  .instance__expenses-wrap {
+  .instance__expenses-wrapper {
     display: inline-block;
+    width: 30%;
   }
 
   .instance__expenses {
+    text-align: right;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .instance__expenses-price {
+    display: inline-block;
+    margin-top: 10px;
   }
 
   .compare__label {
@@ -103,11 +166,66 @@
 }
 
 @media (min-width: @desktop) {
-  .instance__wrap {
+  .instance {
+    position: relative;
+    margin-top: 38px;
+    padding-bottom: 37px;
+  }
+
+  .instance::before {
+    height: 76%;
+    background-color: #f2f2f2;
+  }
+
+  .instance__header {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0 40px;
+  }
+
+  .instance__wrapper {
     display: flex;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .instance__wrapper-text {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 46%;
+    margin-bottom: 0;
+    padding-top: 90px;
+    padding-right: 110px;
   }
 
   .instance__text {
-    width: 50%;
+    margin-bottom: 54px;
+  }
+
+  .instance__facts {
+    width: 90%;
+    margin-bottom: 28px;
+  }
+
+  .instance__item-text {
+    background-color: @grey;
+  }
+
+  .instance__expenses-wrapper {
+    width: 73%;
+  }
+
+  .instance__expenses {
+    text-align: left;
+  }
+
+  .instance__expenses-price {
+    margin-top: 0;
+    margin-left: 59px;
   }
 }
