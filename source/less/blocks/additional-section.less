@@ -1,1 +1,108 @@
-//Скоро здесь появится код! )
+.form__additional-section {
+  margin-bottom: 33px;
+}
+
+.additional-section__header-wrapper {
+  margin-bottom: 30px;
+}
+
+.additional-section__row {
+  display: flex;
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.additional-section__input:not(:checked) + .checkbox-icon {
+  display: none;
+}
+
+.additional-section__input:checked + .checkbox-icon {
+  position: absolute;
+  fill: @green;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-25%);
+  z-index: -1;
+}
+
+.additional-section__label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.additional-section__label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  border: 1px solid #cdcdcd;
+  flex-shrink: 0;
+}
+
+@media (min-width: @tablet) {
+  .form__additional-section {
+    margin-bottom: 23px;
+  }
+
+  .additional-section__header-wrapper {
+    margin-bottom: 53px;
+  }
+
+  .additional-section__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    padding: 0 70px;
+  }
+
+  .additional-section__row {
+    width: 45.3%;
+    margin: 0 16px;
+    margin-bottom: 32px;
+    padding: 0 14px;
+    // width: 283px;
+  }
+
+  .additional-section__label::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 18px;
+  }
+
+  .additional-section__input:checked + .checkbox-icon {
+    left: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .form__additional-section {
+    margin-bottom: 20px;
+  }
+
+  .additional-section__header-wrapper {
+    margin-bottom: 55px;
+  }
+
+  .additional-section__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .additional-section__row {
+    width: 20.02%;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .additional-section__input:checked + .checkbox-icon {
+    left: 10px;
+  }
+}

@@ -1,15 +1,23 @@
 .page-form__header {
+  margin-bottom: 25px;
+  padding: 15px 20px 0;
   font-size: 36px;
   line-height: 60px;
 }
 
-.page-form h2 {
+.blocks-header {
+  display: inline-block;
+  margin: 0;
+  padding-right: 24px;
   font-size: 24px;
   line-height: 24px;
+  background-color: @white;
 }
 
 .page-form__paragraph {
-  padding-left: 40px;
+  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 38px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -20,36 +28,164 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+}
+
+.page-form label {
+  color: @medium-black;
+  cursor: pointer;
+}
+
+.page-form input {
+  padding: 12px 14px;
+  color: @light-black;
+  outline: none;
+}
+
+.page-form input[placeholder] {
+  color: @green;
+}
+
+.primary-data__cat-data {
+  padding-bottom: 10px;
+  border-bottom: 1px solid @grey;
+}
+
+.cat-data__row {
+  padding: 0 20px;
+}
+
+.cat-data__row,
+.owner-contacts__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.cat-data__input,
+.owner-contacts__input {
+  width: 100%;
+}
+
+.cat-data__row label,
+.owner-contacts__row label {
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.cat-info {
+  padding: 21px 0 9px 0;
+  border-bottom: 1px solid @grey;
+}
+
+.cat-info__row {
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+
+.cat-info__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cat-info__label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  // background-color: @green;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+
+.cat-info__radio:checked + .cat-info__label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: @green;
+  // border: 1px solid @grey;
+  border-radius: 50%;
+}
+
+.form__owner-contacts {
+  padding-top: 28px;
+  padding-bottom: 14px;
+}
+
+.owner-contacts__header-wrapper {
+  margin-bottom: 30px;
+}
+
+.owner-contacts__row label {
+  margin-right: 10px;
+}
+
+.form__comment {
+  padding-bottom: 22px;
+}
+
+.comment__header-wrapper {
+  margin-bottom: 30px;
 }
 
 .comment__text {
+  width: 100%;
+  min-height: 152px;
+  padding: 14px;
   font-size: 16px;
   line-height: 18px;
+  color: @light-black;
   text-transform: uppercase;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
 }
 
-.additional-section__label {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+.after-form {
+  padding: 0 20px;
 }
 
-.form__footnote {
+.after-form__button-submit {
+  border: none;
+  padding: 10px 20px;
+}
+
+.after-form__footnote {
+  margin-top: 21px;
+  margin-bottom: 33px;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
+  color: @light-black;
+  font-family: "Arial", sans-serif;
 }
 
 @media (min-width: @tablet) {
-  .form {
-    padding: 0 40px;
+  .page-form input {
+    padding: 10px 16px;
+  }
+
+  .page-form input,
+  .page-form label {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .page-form__header {
+    margin-bottom: 55px;
+    padding: 33px 30px 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   .page-form__paragraph {
+    margin-bottom: 65px;
+    padding: 0 70px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -59,63 +195,186 @@
     line-height: 36px;
   }
 
-  .page-form input,
-  .page-form label {
-    font-size: 20px;
-    line-height: 20px;
+  .form__primary-data {
+    margin-bottom: 48px;
+  }
+
+  .primary-data__cat-data {
+    margin-bottom: 46px;
+    border-bottom: none;
+  }
+
+  .cat-data__row {
+    margin-bottom: 17px;
+    padding: 0 70px;
+  }
+
+  .cat-data__row label,
+  .owner-contacts__row label {
+    margin-right: 18px;
+  }
+
+  .cat-info {
+    margin: 0 70px;
+    padding: 24px 8px 10px;
+    border: 1px solid #cdcdcd;
+  }
+
+  .cat-info__row {
+    margin-bottom: 13px;
+  }
+
+  .cat-info__label::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+  }
+
+  .cat-info__radio:checked + .cat-info__label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+  }
+
+  .blocks-header {
+    padding: 0 40px;
+  }
+
+  .form__owner-contacts {
+    margin-bottom: 32px;
+  }
+
+  .owner-contacts__wrap {
+    padding: 0 70px;
+  }
+
+  .owner-contacts__header-wrapper {
+    margin-bottom: 72px;
+  }
+
+  .owner-contacts__row {
+    margin-bottom: 18px;
+  }
+
+  .form__comment {
+    margin-bottom: 40px;
+  }
+
+  .comment__header-wrapper {
+    margin-bottom: 72px;
+  }
+
+  .comment__wrapper {
+    padding: 0 70px;
   }
 
   .comment__text {
+    padding: 11px 18px;
     font-size: 20px;
     line-height: 30px;
   }
 
-  .additional-section__wrap {
+  .after-form {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 72px;
+    padding: 0 70px;
   }
 
-  .additional-section__row {
-    width: 283px;
-    // margin-right: 60px;
-  }
-
-  .form__button-submit {
-    display: inline-block;
-    width: 283px;
+  .after-form__button-submit {
+    width: 45%;
+    margin-right: 10px;
     border: none;
+    padding: 15px 20px;
+    font-size: 20px;
   }
 
-  .form__footnote {
-    display: inline-block;
+  .after-form__footnote {
+    width: 45%;
+    margin: 0;
     font-size: 16px;
   }
 }
 
 @media (min-width: @desktop) {
   .page-form__header {
-    padding-left: 40px;
+    max-width: 1300px;
+    margin: 0 auto 55px;
+    padding: 22px 40px 0;
+  }
+
+  .page-form__paragraph {
+    max-width: 1300px;
+    margin: 0 auto 65px;
+    padding: 0 40px;
   }
 
   .primary-data {
     display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    padding: 0 40px;
   }
 
-  .owner-contacts__row {
-    width: 570px;
+  .primary-data__cat-data {
+    width: 46.5%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .primary-data__cat-info {
+    width: 47%;
+    margin: 0;
+  }
+
+  .cat-data__row {
+    padding: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .form__owner-contacts {
+    margin-bottom: 34px;
   }
 
   .owner-contacts__wrap {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
-  .form__button-submit {
-    width: 570px;
+  .owner-contacts__row {
+    width: 47%;
   }
 
-  // .form__footnote { не пойму почему при добавлении размера по макету переносится на новую строку
-  //   width: 570px;
-  // }
+  .comment__wrapper {
+    padding: 0 40px;
+  }
+
+  .after-form {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 89px;
+    padding: 0 40px;
+  }
+
+  .after-form__button-submit {
+    width: 46.5%;
+    margin-right: 82px;
+    border: none;
+    padding: 16px 20px;
+    font-size: 20px;
+  }
+
+  .after-form__footnote {
+    width: 45%;
+    text-align: left;
+  }
 }
