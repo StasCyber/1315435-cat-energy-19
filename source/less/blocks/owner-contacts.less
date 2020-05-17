@@ -1,1 +1,57 @@
-// Скоро здесь появится код
+.form__owner-contacts {
+  padding-top: 28px;
+  padding-bottom: 14px;
+}
+
+.owner-contacts__header-wrapper {
+  margin-bottom: 30px;
+}
+
+.owner-contacts__row label {
+  margin-right: 10px;
+}
+
+@media (min-width: @tablet) {
+  .blocks-header {
+    padding: 0 40px;
+  }
+
+  .form__owner-contacts {
+    margin-bottom: 32px;
+  }
+
+  .owner-contacts__wrap {
+    padding: 0 70px;
+  }
+
+  .owner-contacts__header-wrapper {
+    margin-bottom: 72px;
+  }
+
+  .owner-contacts__row {
+    margin-bottom: 18px;
+  }
+
+  .owner-contacts__row label {
+    margin-right: 19px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .form__owner-contacts {
+    margin-bottom: 34px;
+  }
+
+  .owner-contacts__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .owner-contacts__row {
+    width: 47%;
+  }
+}

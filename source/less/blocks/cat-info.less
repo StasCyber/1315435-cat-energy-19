@@ -1,1 +1,80 @@
-// Скоро здесь появится код
+.cat-info {
+  padding: 21px 0 9px 0;
+  border-bottom: 1px solid @grey;
+}
+
+.cat-info__row {
+  padding: 0 20px;
+  margin-bottom: 12px;
+}
+
+.cat-info__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cat-info__label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  // background-color: @green;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.cat-info__label:hover::before,
+.cat-info__label:focus::before {
+  border: 1px solid #bababa;
+}
+
+.cat-info__label:active::before,
+.cat-info__label:active::after {
+  opacity: 0.3;
+}
+
+.cat-info__radio:checked + .cat-info__label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: @green;
+  // border: 1px solid @grey;
+  border-radius: 50%;
+}
+
+@media (min-width: @tablet) {
+  .cat-info {
+    margin: 0 70px;
+    padding: 24px 8px 10px;
+    border: 1px solid #cdcdcd;
+  }
+
+  .cat-info__row {
+    margin-bottom: 13px;
+  }
+
+  .cat-info__label::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 19px;
+  }
+
+  .cat-info__radio:checked + .cat-info__label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .cat-info {
+    margin: 0;
+  }
+}
