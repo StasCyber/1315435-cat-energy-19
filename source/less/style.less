@@ -36,6 +36,15 @@
   cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+  background-color: @green-hover;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .header-wrapper {
   position: relative;
   padding-left: 20px;
@@ -59,13 +68,18 @@
   }
 
   .header-wrapper::after {
-    width: 100%;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 @media (min-width: @desktop) {
   .header-wrapper {
-    padding: 0 70px;
+    max-width: 1300px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -83,7 +97,6 @@
 
 // Блоки находящиеся в index.html
 
-@import "blocks/page-main.less";
 @import "blocks/intro.less";
 @import "blocks/advantages.less";
 @import "blocks/description.less";
@@ -106,3 +119,4 @@
 @import "blocks/owner-contacts.less";
 @import "blocks/comment.less";
 @import "blocks/additional-section.less";
+@import "blocks/after-form.less";

@@ -1,1 +1,77 @@
-// Скоро здесь появится код
+.primary-data__cat-data {
+  padding-bottom: 10px;
+  border-bottom: 1px solid @grey;
+}
+
+.cat-data__row {
+  padding: 0 20px;
+}
+
+.cat-data__row,
+.owner-contacts__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.cat-data__input,
+.owner-contacts__input {
+  width: 100%;
+}
+
+.cat-data__row label,
+.owner-contacts__row label {
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+@media (min-width: @tablet) {
+  .form__primary-data {
+    margin-bottom: 48px;
+  }
+
+  .primary-data__cat-data {
+    margin-bottom: 46px;
+    border-bottom: none;
+  }
+
+  .cat-data__row {
+    margin-bottom: 17px;
+    padding: 0 70px;
+  }
+
+  .cat-data__row label,
+  .owner-contacts__row label {
+    margin-right: 18px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .primary-data {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    padding: 0 40px;
+  }
+
+  .primary-data__cat-data {
+    width: 46.5%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .primary-data__cat-info {
+    width: 47%;
+    margin: 0;
+  }
+
+  .cat-data__row {
+    padding: 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
