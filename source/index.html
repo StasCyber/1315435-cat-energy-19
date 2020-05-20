@@ -5,6 +5,11 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
 
@@ -45,7 +50,7 @@
             <source type="image/webp" srcset="img/index-can-mobile@1x.webp, img/index-can-mobile@2x.webp 2x"> -->
             <source media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
-            <img class="intro__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280px" height="271px" alt="Энергетический корм для кота, с курицей">
+            <img class="intro__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Энергетический корм для кота, с курицей">
           </picture>
           <a class="intro__button button" href="form.html">Подобрать программу</a>
         </section>
@@ -120,19 +125,19 @@
             </div>
             <div class="instance__slider slider">
               <div class="slider__wrapper">
-                <div class="slider__images-wrapper"> <!--Возможно эта обёртка не понадобится-->
+                <div class="slider__images-wrapper">
                   <div class="slider__image slider__image--before">
                     <picture>
                       <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
                       <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
-                      <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="imb/before-mobile@2x.png 2x" alt="Изображение кота до похудения" width="320" height="240">
+                      <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до похудения" width="320" height="240">
                     </picture>
                   </div>
                   <div class="slider__image slider__image--after slider__image--disabled">
                     <picture>
                       <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
                       <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
-                      <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="imb/after-mobile@2x.png 2x" alt="Изображение кота после похудения" width="320" height="240">
+                      <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кота после похудения" width="320" height="240">
                     </picture>
                   </div>
                 </div>
@@ -193,7 +198,7 @@
               <li class="social__item social__item--insta">
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Мы в Инстаграме</span>
-                  <svg class="social__img social__img--insta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+                  <svg class="social__img social__img--insta" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                     <style type="text/css">.st0{fill:#231F20;}</style>
                     <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                     M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -206,7 +211,7 @@
               <li class="social__item social__item--fb">
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Мы в Фейсбуке</span>
-                  <svg class="social__img social__img--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                  <svg class="social__img social__img--fb" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                     <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
                     h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
                     z"/>

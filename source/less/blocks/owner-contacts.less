@@ -7,13 +7,39 @@
   margin-bottom: 30px;
 }
 
+.owner-contacts__header {
+  width: 205px;
+}
+
 .owner-contacts__row label {
   margin-right: 10px;
+}
+
+.owner-contacts__row {
+  position: relative;
+}
+
+.owner-contacts__mail-icon {
+  position: absolute;
+  top: 16px;
+  right: 19px;
+  fill: @medium-black;
+}
+
+.owner-contacts__phone-icon {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  fill: @medium-black;
 }
 
 @media (min-width: @tablet) {
   .blocks-header {
     padding: 0 40px;
+  }
+
+  .owner-contacts__header {
+    width: auto;
   }
 
   .form__owner-contacts {
@@ -35,6 +61,16 @@
   .owner-contacts__row label {
     margin-right: 19px;
   }
+
+  .owner-contacts__mail-icon {
+    top: 20px;
+    right: 16px;
+  }
+
+  .owner-contacts__phone-icon {
+    top: 17px;
+    right: 12px;
+  }
 }
 
 @media (min-width: @desktop) {
@@ -53,5 +89,17 @@
 
   .owner-contacts__row {
     width: 47%;
+  }
+
+  .owner-contacts__mail-icon {
+    width: 17px;
+    top: 21px;
+    right: 23px;
+  }
+
+  .owner-contacts__phone-icon {
+    width: 19px;
+    top: 17px;
+    right: 20px;
   }
 }
