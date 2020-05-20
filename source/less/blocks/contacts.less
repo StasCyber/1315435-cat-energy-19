@@ -55,7 +55,12 @@
   background-image: url("../img/map-pin.png");
   transform: translate(-56%, -44%);
   background-size: cover;
+  z-index: -1;
 }
+
+// .contacts__ymap {
+//   z-index: 1;
+// }
 
 @media (min-width: @tablet) {
   .contacts__wrapper {
@@ -107,11 +112,11 @@
   }
 
   .contacts__wrapper {
-    position: relative;
+    position: absolute;
     width: 570px;
-    top: -10px;
+    top: 90px;
     left: 110px;
-    margin: 0;
+    margin: 0 auto;
     padding: 62px 72px 59px 78px;
     background-color: @white;
   }

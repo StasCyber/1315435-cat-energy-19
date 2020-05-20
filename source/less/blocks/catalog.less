@@ -46,6 +46,10 @@
   text-transform: uppercase;
 }
 
+.list-products__link-header {
+  color: @black;
+}
+
 .table-properties {
   width: 100%;
   padding: 0;
@@ -65,6 +69,11 @@
   padding: 0;
   margin: 0;
   // object-fit: contain; похже этот стиль на изображение надо накладывать
+}
+
+.list-products__image-link {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .list-products__item-image {
@@ -130,19 +139,12 @@
   }
 
   .list-products__picture {
-    // position: absolute;
     width: 100%;
-    // height: 208px;
-    // top: -100px;
-    // left: 0;
-    // right: 0;
-    margin-top: -82px;
   }
 
-  // .list-products__item-image-wrapper {
-  //   width: 100%;
-  //   height: 208px;
-  // }
+  .list-products__image-link {
+    margin-top: -82px;
+  }
 
   .list-products__item-image {
     display: block;

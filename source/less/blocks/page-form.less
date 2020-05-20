@@ -42,6 +42,30 @@
   outline: none;
 }
 
+.page-form input:focus,
+.page-form input:active {
+  border: 2px @light-black solid;
+}
+
+.page-form input:focus + .owner-contacts__mail-icon path,
+.page-form input:active + .owner-contacts__mail-icon path {
+  fill: @green;
+}
+
+.page-form input:focus + .owner-contacts__phone-icon path,
+.page-form input:active + .owner-contacts__phone-icon path {
+  fill: @green;
+}
+
+.page-form input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px #ff8282 solid;
+}
+
+.page-form input:invalid:not(:focus):not(:placeholder-shown) + .owner-contacts__mail-icon path,
+.page-form input:invalid:not(:focus):not(:placeholder-shown) + .owner-contacts__phone-icon path {
+  fill: #ff8282;
+}
+
 .page-form input[placeholder] {
   color: #444444;
 }
