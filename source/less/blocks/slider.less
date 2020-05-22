@@ -82,11 +82,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 536px;
+    height: 536px;
   }
 
   .slider__image {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
     left: 0;
@@ -105,6 +106,7 @@
   .slider__img {
     position: absolute;
     width: 690px;
+    max-width: inherit;
     height: auto;
     display: block;
     // max-width: initial;
@@ -121,6 +123,7 @@
   }
 
   .slider__button {
+    display: inline-table;
     font-size: 20px;
     line-height: 20px;
     margin-left: 0;
