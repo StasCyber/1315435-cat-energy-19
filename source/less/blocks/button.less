@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: @green;
+  color: @white;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: @green-hover;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--grey {
+  border: none;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: @light-black;
+  cursor: pointer;
+}
+
+.button--grey:hover,
+.button--grey:focus {
+  background-color: #ebebeb;
+}
+
+.button--grey:active {
+  background-color: #ebebeb;
+  color: rgba(68, 68, 68, 0.3);
+}

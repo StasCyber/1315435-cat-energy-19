@@ -9,16 +9,20 @@ function init(){
 let coords = [
   [59.938635, 30.323118]
 ],
+
 myCollection = new ymaps.GeoObjectCollection({}, {
-draggable: false,
-iconLayout: 'default#image',
-iconImageHref: './img/map-pin.png',
-iconImageSize: [82, 70],
-iconImageOffset: [-35, -52]
+  draggable: false,
+  iconLayout: "default#image",
+  iconImageHref: "./img/map-pin.png",
+  iconImageSize: [82, 70],
+  iconImageOffset: [-35, -52]
 });
+
 for (let i = 0; i < coords.length; i++) {
   myCollection.add(new ymaps.Placemark(coords[i]));
 }
+
 myMap.geoObjects.add(myCollection);
-myMap.behaviors.disable('scrollZoom');
+
+myMap.behaviors.disable("scrollZoom");
 };

@@ -49,6 +49,23 @@
   border-radius: 50%;
 }
 
+.cat-info__radio:disabled + .cat-info__label {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.cat-info__radio:checked:disabled + .cat-info__label::after {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.cat-info__radio:checked:disabled + .cat-info__label::before {
+  opacity: 0.3;
+  cursor: default;
+}
+
+
+
 @media (min-width: @tablet) {
   .cat-info {
     margin: 0 70px;

@@ -1,9 +1,3 @@
-//Медиазапрос имеющий тот же смысл что и meta name="viewport" в html разметке
-// @viewport {
-//   width: device-width;
-//   zoom: 1.0;
-// }
-
 @font-face {
   font-family: "Oswald";
   src: url("../fonts/oswaldregular.woff2") format("woff2");
@@ -22,67 +16,6 @@
   font-display: swap;
 }
 
-.button {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  background-color: @green;
-  color: @white;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-  background-color: @green-hover;
-}
-
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.header-wrapper {
-  position: relative;
-  padding-left: 20px;
-}
-
-.header-wrapper::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 85%;
-  top: 53%;
-  right: 0;
-  height: 3px;
-  background-color: @green;
-  z-index: -1;
-}
-
-@media (min-width: @tablet) {
-  .header-wrapper {
-    padding: 0 30px;
-  }
-
-  .header-wrapper::after {
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (min-width: @desktop) {
-  .header-wrapper {
-    max-width: 1300px;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @import "variables.less";
 @import "mixins.less";
 @import "global.less";
@@ -94,6 +27,8 @@
 @import "blocks/contacts.less";
 @import "blocks/page-footer.less";
 @import "blocks/social.less";
+@import "blocks/button.less";
+@import "blocks/header-wrapper.less";
 
 // Блоки находящиеся в index.html
 
@@ -110,6 +45,7 @@
 @import "blocks/show-more.less";
 @import "blocks/additional.less";
 @import "blocks/bonus.less";
+@import "blocks/list-products.less";
 
 // Блоки находящиеся в form.html
 

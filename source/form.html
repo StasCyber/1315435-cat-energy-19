@@ -48,15 +48,15 @@
             <div class="primary-data__cat-data cat-data"><!--Данные кота-->
               <div class="cat-data__row">
                 <label class="cat-data__label" for="cat-name">Имя:*</label>
-                <input class="cat-data__input" id="cat-name" type="text" placeholder="Барсик" name="Имя кота/кошки" required>
+                <input class="cat-data__input" id="cat-name" type="text" placeholder="Барсик" name="cat-name" required>
               </div>
               <div class="cat-data__row">
                 <label class="cat-data__label" for="cat-weight">Вес (кг):*</label>
-                <input class="cat-data__input" id="cat-weight" type="text" placeholder="7" name="Вес кота/кошки" required>
+                <input class="cat-data__input" id="cat-weight" type="text" placeholder="7" name="cat-weight" required>
               </div>
               <div class="cat-data__row">
                 <label class="cat-data__label" for="cat-age">Возраст (лет):</label>
-                <input class="cat-data__input" id="cat-age" type="text" placeholder="7" name="Возраст кота/кошки">
+                <input class="cat-data__input" id="cat-age" type="text" placeholder="7" name="cat-age">
               </div>
             </div>
 
@@ -78,20 +78,20 @@
 
           <div class="form__owner-contacts owner-contacts"><!--Е-мэил и телефон-->
             <div class="owner-contacts__header-wrapper header-wrapper">
-              <h2 class="owner-contacts__header blocks-header">Контактные данные (владельца кота)</h2>
+              <h2 class="owner-contacts__header header-wrapper--spacing">Контактные данные (владельца кота)</h2>
             </div>
             <div class="owner-contacts__wrap container">
               <div class="owner-contacts__row">
                 <label class="owner-contacts__label" for="e-mail">E-mail:*</label>
-                <input class="owner-contacts__input owner-contacts__input--mail" id="e-mail" type="email" placeholder="Kuklachev@gmail.com" name="Имя кота/кошки" required>
+                <input class="owner-contacts__input owner-contacts__input--mail" id="e-mail" type="email" placeholder="Kuklachev@gmail.com" name="Cat-name" required>
                 <svg class="owner-contacts__mail-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18" height="14" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
                   <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
                 </svg>
               </div>
               <div class="owner-contacts__row">
                 <label class="owner-contacts__label" for="phone">Телефон:*</label>
-                <input class="owner-contacts__input owner-contacts__input--phone" id="phone" type="tel" pattern="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" name="Телефон:" required>
-                <svg class="owner-contacts__phone-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21" height="21" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                <input class="owner-contacts__input owner-contacts__input--phone" id="phone" type="tel" pattern="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" name="Phone:" required>
+                <svg class="owner-contacts__phone-icon" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21" height="21" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
                   <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
                   <path
                     d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
@@ -105,7 +105,7 @@
 
           <div class="form__comment comment"><!--комментарий-->
             <div class="comment__header-wrapper header-wrapper">
-              <h2 class="comment__header blocks-header">Комментарий</h2>
+              <h2 class="comment__header header-wrapper--spacing">Комментарий</h2>
             </div>
             <div class="comment__wrapper container">
               <textarea class="comment__text" name="Комментарий" rows="5" cols="33">Расскажите обо всех повадках кота</textarea>
@@ -120,36 +120,36 @@
 
           <div class="form__additional-section additional-section"><!--дополнительно-->
             <div class="additional-section__header-wrapper header-wrapper">
-              <h2 class="additional-section__header blocks-header">Дополнительно</h2>
+              <h2 class="additional-section__header header-wrapper--spacing">Дополнительно</h2>
             </div>
             <div class="additional-section__wrapper container">
               <div class="additional-section__row">
-                <input class="additional-section__input visually-hidden" id="shugar" type="checkbox" name="Сахарозаменитель" checked>
+                <input class="additional-section__input visually-hidden" id="sugar" type="checkbox" name="sweetener" checked>
                 <svg class="checkbox-icon" width="30" height="30"><use xlink:href="#checkbox"></use></svg>
-                <label class="additional-section__label" for="shugar">Сахарозаменитель</label>
+                <label class="additional-section__label" for="sugar">Сахарозаменитель</label>
               </div>
 
               <div class="additional-section__row">
-                <input class="additional-section__input visually-hidden" id="water" type="checkbox" name="Питьевая вода">
+                <input class="additional-section__input visually-hidden" id="water" type="checkbox" name="water">
                 <svg class="checkbox-icon" width="30" height="30"><use xlink:href="#checkbox"></use></svg>
                 <label class="additional-section__label" for="water">Питьевая вода</label>
               </div>
 
               <div class="additional-section__row">
-                <input class="additional-section__input visually-hidden" id="milk" type="checkbox" name="Молоко">
+                <input class="additional-section__input visually-hidden" id="milk" type="checkbox" name="milk">
                 <svg class="checkbox-icon" width="30" height="30"><use xlink:href="#checkbox"></use></svg>
                 <label class="additional-section__label" for="milk">Молоко</label>
               </div>
 
               <div class="additional-section__row">
-                <input class="additional-section__input visually-hidden" id="vitamins" type="checkbox" name="Витамины">
+                <input class="additional-section__input visually-hidden" id="vitamins" type="checkbox" name="vitamins">
                 <svg class="checkbox-icon" width="30" height="30" id="vitamins-icon"><use xlink:href="#checkbox"></use></svg>
                 <label class="additional-section__label" for="vitamins">Витамины</label>
               </div>
             </div>
           </div>
 
-          <div class="form__afrer-form after-form">
+          <div class="form__after-form after-form">
             <button class="button after-form__button-submit" type="submit">Отправить заявку</button>
             <p class="after-form__footnote">* — Обязательные поля</p>
           </div>
@@ -160,7 +160,7 @@
       <section class="contacts">
         <div class="contacts__wrapper container">
           <h2 class="contacts__header">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-          <p class="contacts__adress"><span class="contacts__street">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span> Санкт-Петербург</p>
+          <p class="contacts__address"><span class="contacts__street">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span> Санкт-Петербург</p>
         </div>
         <div class="contacts__map">
           <div class="contacts__ymap" id="map" style="width: 100%; height: 400px"></div>
@@ -181,7 +181,7 @@
             <li class="social__item social__item--vk">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы Вконтакте</span>
-                <svg class="social__img social__img--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+                <svg class="social__img social__img--vk" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                   <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                   c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
                   s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
@@ -198,10 +198,10 @@
                 </svg>
               </a>
             </li>
-            <li class="social__item social__item--insta">
+            <li class="social__item social__item--instagram">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в Инстаграме</span>
-                <svg class="social__img social__img--insta" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+                <svg class="social__img social__img--instagram" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                   <style type="text/css">.st0{fill:#231F20;}</style>
                   <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                   M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -214,7 +214,7 @@
             <li class="social__item social__item--fb">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg class="social__img social__img--fb" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                <svg class="social__img social__img--fb" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                   <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
                   h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
                   z"/>
