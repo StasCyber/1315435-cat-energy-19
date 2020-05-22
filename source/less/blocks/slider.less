@@ -151,9 +151,32 @@
   }
 }
 
+@media (min-width: 1020px) {
+  .slider__img {
+    position: absolute;
+    width: 690px;
+    height: auto;
+    display: block;
+    margin-bottom: 13px;
+
+    &--before {
+      left: 150px;
+    }
+
+    &--after {
+      right: 150px;
+    }
+  }
+}
+
 @media (min-width: @desktop) {
   .slider {
     width: 54%;
+  }
+
+  .instance__slider {
+    position: relative;
+    padding-bottom: 37px;
   }
 
   .slider__images-wrapper {
@@ -185,9 +208,9 @@
     content: "";
     display: block;
     position: absolute;
-    width: 27.3%;
-    height: 76%;
-    right: 0;
+    width: 93%;
+    height: 93%;
+    right: -50%;
     bottom: 0;
     background: #ebebeb;
   }
